@@ -3,7 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/take';
-import { FormControl, FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormGroup, FormControl, Validators,
+FormsModule, ReactiveFormsModule, FormBuilder, FormArray } from '@angular/forms';
 import { Artist } from '../data/formData.model';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
@@ -42,25 +43,34 @@ createForm() {
 
 
 checked: any;
-  knows: any;
   artistArray: any;
   musicForm: FormGroup;
   areas = this.musicForm;
   constructor(private dataService: DataService,
               private fb: FormBuilder,
               private router: Router) {
-               this.knows = this.dataService.getData();
+               this.artistArray = this.dataService.getData();
+            //   this.artistArray = Object.entries(this.artistArray);
 
-              }
+
+    }
 
  // tslint:disable-next-line:use-life-cycle-interface
  ngOnInit() {
   this.musicForm = this.fb.group({
-    artistArray: this.fb.array([])
-  });
-
-
-  }
+    genre: ['', Validators.required],
+    genre_id: ['', Validators.required],
+    artists: this.initArtists()
+  }); 
+ }
+ initArtists() {
+   // initialize our artists
+   return this.fb.group({
+     artist_id: ['', Validators.required],
+     artist: ['', Validators.required],
+     selected: ['', Validators.required]
+   });
+ }
   submit(areas) {
     console.log(areas);
     const vals = {};

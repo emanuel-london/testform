@@ -1,29 +1,25 @@
+<form [formGroup]="musicForm" (ngSubmit)="submit(musicForm)">
+          <ng-container>
+            <div class="example-card" *ngFor="let item of artistArray | async; let i = index" >
+              <div>
+            <h1>{{ item.genre }}</h1>
+            <div class="panel">
+                <div>
+                 <div *ngFor="let artist of item.artists; let a = index;"class="col-md-4" formGroupName="artists" >
+                   <label class="checkbox-inline"> {{artist.artist}}
+                     <input class="form-control" [value]="artist.selected" formControlName="selected" type="checkbox" [checked]="artist.selected" ></label>
+                 </div>
 
-<div class="example-card" *ngFor="let item of knows | async; index as i;" >
-<button class="accordion col-md-4">{{ item.genre }}</button>
-<div class="panel">
-    <div>
-        <form [formGroup]="musicForm" >
-            <div class="form-group"  formArrayName="artistArray">
-        <label *ngFor="let artist of item.artists ; index as a; "> {{artist.artist}}
-          
-          <input class="form-control"   name="artist" value="{{artist.artist}}"  type="checkbox" [formControlName]="a"></label>
-          </div>
-      
+                       </div>
 
+                       </div>
+                 </div>
+               </div>
+              </ng-container>
+              <div class="button ">
+                  <button class="btn btn-lg btn-start"> Get Started </button>
+                </div>
         </form>
-        
-
-      </div>
-  
-</div>
-
-</div>
-<div class="button ">
-    <button (click)="submit(musicForm)" class="btn btn-lg btn-start"> Get Started </button>
-  </div>
-
-
 
 
 
