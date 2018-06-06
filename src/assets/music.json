@@ -1,0 +1,132 @@
+[
+	{
+		"genre_id": 1,
+		"genre": "Rock",
+		"artists": [
+			{
+				"artist_id": 1,
+				"artist": "U2",
+				"selected": true
+			},
+			{
+				"artist_id": 2,
+				"artist": "AC/DC",
+				"selected": false
+			},
+			{
+				"artist_id": 3,
+				"artist": "Skillet",
+				"selected": true
+			},
+			{
+				"artist_id": 4,
+				"artist": "Guns n Roses",
+				"selected": false
+			}
+		]
+	},
+	{
+		"genre_id": 2,
+		"genre": "Rap",
+		"artists": [
+			{
+				"artist_id": 5,
+				"artist": "Eminem",
+				"selected": false
+			},
+			{
+				"artist_id": 6,
+				"artist": "Lecrae",
+				"selected": false
+			},
+			{
+				"artist_id": 7,
+				"artist": "KJ-52",
+				"selected": false
+			},
+			{
+				"artist_id": 8,
+				"artist": "Trip Lee",
+				"selected": true
+			}
+		]
+	},
+	{
+		"genre_id": 3,
+		"genre": "Punk Rock",
+		"artists": [
+			{
+				"artist_id": 9,
+				"artist": "Good Charlotte",
+				"selected": false
+			},
+			{
+				"artist_id": 10,
+				"artist": "The Offspring",
+				"selected": false
+			},
+			{
+				"artist_id": 11,
+				"artist": "The Fold",
+				"selected": false
+			},
+			{
+				"artist_id": 12,
+				"artist": "Sum 41",
+				"selected": false
+			}
+		]
+	},
+	{
+		"genre_id": 4,
+		"genre": "Metal",
+		"artists": [
+			{
+				"artist_id": 13,
+				"artist": "koRn",
+				"selected": false
+			},
+			{
+				"artist_id": 14,
+				"artist": "The Brave",
+				"selected": false
+			},
+			{
+				"artist_id": 15,
+				"artist": "RED",
+				"selected": false
+			},
+			{
+				"artist_id": 16,
+				"artist": "Love and Death",
+				"selected": false
+			}
+		]
+	},
+	{
+		"genre_id": 5,
+		"genre": "Pop",
+		"artists": [
+			{
+				"artist_id": 17,
+				"artist": "Katy Perry",
+				"selected": false
+			},
+			{
+				"artist_id": 18,
+				"artist": "Lady Gagga",
+				"selected": false
+			},
+			{
+				"artist_id": 19,
+				"artist": "Taylor Swift",
+				"selected": false
+			},
+			{
+				"artist_id": 20,
+				"artist": "Justin Bieber",
+				"selected": false
+			}
+		]
+	}
+]

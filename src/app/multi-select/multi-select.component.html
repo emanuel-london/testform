@@ -1,0 +1,30 @@
+
+<div class="example-card" *ngFor="let item of knows | async; index as i;" >
+<button class="accordion col-md-4">{{ item.genre }}</button>
+<div class="panel">
+    <div>
+        <form [formGroup]="musicForm" >
+            <div class="form-group"  formArrayName="artistArray">
+        <label *ngFor="let artist of item.artists ; index as a; "> {{artist.artist}}
+          
+          <input class="form-control"   name="artist" value="{{artist.artist}}"  type="checkbox" [formControlName]="a"></label>
+          </div>
+      
+
+        </form>
+        
+
+      </div>
+  
+</div>
+
+</div>
+<div class="button ">
+    <button (click)="submit(musicForm)" class="btn btn-lg btn-start"> Get Started </button>
+  </div>
+
+
+
+
+
+<p>Form value: {{ musicForm.value | json }}</p>
